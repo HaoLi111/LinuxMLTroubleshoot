@@ -68,7 +68,7 @@ if that fails, either you have half-installed package or your dpkg needs fixing.
 First make sure you installed R.
 get a daily build of Rstudio, these seems to be fixed.
 
-## R packages installations exited with non zero exit status
+## R packages installations exited with non zero exit status, especially **devtools**
 
 and you cannot library(it) successfully.
 Go to your terminal, run sudo -i R, install your package, check if any of the errors says one or more of your dependencies need other dependencies, install them.
