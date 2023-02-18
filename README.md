@@ -75,7 +75,10 @@ Go to your terminal, run sudo -i R, install your package, check if any of the er
 
 For example, devtools needs something like liblib, libxml, and some fonts handling packages, whenever possible, use sudo apt-get install [your package needed] since it is easier and better maintained.
 
-
+some packages need to r cran build-essential in the terminal
+then update package list
+then install in the terminal (sudo -i R) use install.packages()
+e.x. pROC needs plyr, which needs RCpp which needs the build essentials and a proper GCC compiler(and it needs to be able to find it), install and test them one by one in the terminal.
 
 
 
