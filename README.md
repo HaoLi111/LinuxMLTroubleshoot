@@ -31,7 +31,9 @@ see which filament of the disk has broken file system. If it says manually type 
 
 If this does not work and the system says the root is in use or busy. Reboot.
 
-## 
+## if system repeatedly boots in to initramfs, and some disks have no write permissions
+
+Check disks, find the disk that you have that you cannot use, format it.
 
 
 # drivers and CUDA
