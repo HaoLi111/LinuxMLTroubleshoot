@@ -65,11 +65,21 @@ conda handles the version pretty well for pytorch and tf at least in Dec 2022, t
 
 install conda using bash and select no on whether to conda init. by this time it says experimental. refer to the official documentation to fill out the path in .bashrc. if your conda says it is not properly preconfigured this is probably the reason. purge conda and redo it.
 
+modify the bashrc file and conda init later. restart kernel before activating your first environment.
+
+if some packages do not have a conda install. install pip and use pip before using conda to setup ml frameworks.
+
+specifing torch version (shown in bash) works. but conda install torch at feb 28 also passes test and recognizes cuda.
+
 conda activate torch. Use an environment when handling ML packages with CUDA togther!!! Then start with the **package you actually use**, not the one it requires. Work out the top package and let conda solve its dependencies!
 
 And in general do not worry CUDA on top of NV drivers, I used 525 and I also seen a tutorial where 470 worked--they have better comp. than the ML package does/
 
 if your ML framework still fights with environment, then try a nightly build version or build it on your pc.
+
+
+
+
 
 ## when importing package cannot import name ... from PIL
 
