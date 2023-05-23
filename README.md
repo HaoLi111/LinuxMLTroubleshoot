@@ -59,6 +59,13 @@ If a cuda come with it and it is not the version you want, do not worry. Conda e
 
 ## conda, CUDA and py package dependencies
 
+If slightly older package allows 
+```
+conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge
+```
+works for python 3.7 and 3.8
+
+
 Do not conda install cudatoolkit before cudnn and pytorch!!! you might end up installing a prerequisite too new to be taken by the package you want to use.
 
 conda handles the version pretty well for pytorch and tf at least in Dec 2022, though the latest tf and torch do not use same cuda (11.2 and 11.3 respectively, the latest is 12 when writing it. I used not the latest but the **latest one supported by conda -c install**, worked well
