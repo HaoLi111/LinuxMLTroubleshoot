@@ -65,6 +65,16 @@ conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit
 ```
 works for python 3.7 and 3.8
 
+To use torch and tensorflow together:
+
+```
+conda install tensorflow-gpu
+conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge
+```
+
+Note conda may downgrade tensorflow and cuda upon installation of pytorch, but this works-- maybe there is a better anc cleaner way.
+On the manual way you have to match tf and torch with nvcc, cuda, cudnn, etc.
+
 
 Do not conda install cudatoolkit before cudnn and pytorch!!! you might end up installing a prerequisite too new to be taken by the package you want to use.
 
@@ -85,7 +95,13 @@ And in general do not worry CUDA on top of NV drivers, I used 525 and I also see
 if your ML framework still fights with environment, then try a nightly build version or build it on your pc.
 
 
+## CUDA: unspecified launch failure
 
+If sometimes your system also fails, and sometimes segmentation fault running some C programs, check your RAM, bios voltage settings and maybe check your bios website (motherboard manufacturer) to see if there is a compatibility search.
+
+See also:
+
+https://github.com/pytorch/pytorch/issues/74235
 
 
 ## when importing package cannot import name ... from PIL
