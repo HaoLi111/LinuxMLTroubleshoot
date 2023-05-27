@@ -12,7 +12,7 @@ For example. NV cards 3090 can use driver 470-525. but only non open kernels can
  - package installation cannot be processes with the default grammar or options
 For example, you need to add path for conda manually. conda init is experimental by the time I write this.
 
-# My hardware 1
+# My hardware 1 - OS 1 [Ubuntu 22.04]
 
 My pc is msi Z790 DDR5 wifi
 kingston 2TB ssd + a 3 year old (about 2019 Dec) ssd 512G from dell laptop.
@@ -24,7 +24,7 @@ Corsair DDR5  64GB(32GBB*2)
 with some DDR5s the hardware LED does not turn off and the system does not boot up. I returned them--maybe there are way to fix it.
 no other change in bios. no over clocking.
 
-# OS, disk and fsck
+## OS, disk and fsck
 
 I did not change much in the BIOS from the msi board coming Dec 2022. I turned the LED light control off and intel XMP off (clicked on the XMP profliles and made sure non of the XMP profile buttons 1-6 are highlighted)
 
