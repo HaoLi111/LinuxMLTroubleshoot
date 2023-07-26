@@ -2,6 +2,17 @@
 All problems I encountered in building machine, trying to remove windows, install linux, conda, pytorch with cuda, rstudio, devtools and more--and how I got through.
 This is a bit long, press ctrl F to find the section you want. If you have a similar setup, maybe read through.
 
+# ** Why AI softwares are hard to install, and what to do?
+
+I made a thorough video in:
+
+![Part 1: direct install vs venv, vs conda, vs docker, vs I give up and use Colab, and some practical OS and hardware compatibilities and restrictions,
+and what to choose in some cases,](https://youtu.be/VzluixBnXb0)
+
+Note 1-3
+
+
+
 # What makes installation of system, environment or packages hard?
  - pre installation environment may not be clean
 
