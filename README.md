@@ -6,8 +6,8 @@ This is a bit long, press ctrl F to find the section you want. If you have a sim
 
 I made a thorough video in:
 
-[Part 1: direct install vs venv, vs conda, vs docker, vs I give up and use Colab, and some practical OS and hardware compatibilities and restrictions,
-and what to choose in some cases,](https://youtu.be/VzluixBnXb0)
+[Part 1: direct install vs venv, vs conda, vs docker, vs I give up and use Colab, and some practical OS and hardware compatibilities and restrictions
+and what to choose in some cases][https://youtu.be/VzluixBnXb0]
 
 Note 1-3
 
