@@ -9,6 +9,18 @@ I made a thorough video in:
 [Part 1: direct install vs venv, vs conda, vs docker, vs I give up and use Colab, and some practical OS and hardware compatibilities and restrictions
 and what to choose in some cases][https://youtu.be/VzluixBnXb0]
 
+## conda env
+cpu only, windows,
+
+```
+mamba install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 -c pytorch -c conda-forge
+pip install tensorflow==2.7.1
+pip install tpot==0.12.0
+mamba install conda
+```
+
+
+
 Note 1-3
 
 
