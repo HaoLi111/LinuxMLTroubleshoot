@@ -61,6 +61,8 @@ Embarassing(ly easy) parallel: just use foreach and doParallel.
 Very easy. See https://cran.r-project.org/web/packages/doParallel/vignettes/gettingstartedParallel.pdf
 Not only parallel but also much better arrangement when saving the arrays (.combine = 'cbind', etc) this .combine is very useful.
 
+**caret uses the advantage of this registerDoParallel()** so you might get speed up for free.
+
 The Art of R Programming explained why arrays in native R are hard to modify. I forgot where and I am too lazy to pull it out.
 
 If some of the loops are not faster in either combinations, try the old sapply and lapply.
@@ -73,7 +75,38 @@ If everything is not mutable, use cython? this can be installed in conda.
 
 If not, wrap anything purely numeric in numba. But you do have to check nopython=True really makes it faster **sometimes not**.
 
-It does not do much?
+Lots of ML packages do have their own ways to parallelize.
+
+On very small data (usually tabular with <800 rows).
+Model selection with inter par maybe good. 
+You almost always have to use GPU for TabPFN models when rows gets close to 1000.
+
+On small data (usually tabular with < 1500 rows <20 vars).
+For Sklearn family (it's relatives, neighbors and neighbor's cats), some model task can be intra par-ed with njobs settings. 
+This is used in a lot of gradient boost tree forests. For CPU parallelism.
+
+On GBTF
+For some weird kids like XG boost, Catboost, lightgbm, they have very easy commands to use GPU (maybe install cuda beforehands, but even if not, sometimes they work, maybe they shouldn't, but they just did)
+
+speeding up of xgb, cbst, are ~3-8 times the cpu on smaller cases, but better when there is more rows. (I have never got more than 10 times the cpu, maybe my cpu is too good)
+
+
+
+
+You can write stuffs in cuda, or use torch/ tf tensors directly to use gpu to do matrices (can also do no grad).
+
+Cu has CuFFT.
+
+But what to do if not everything in the world is not linear, and that you still want GPU?
+
+### In Julia?
+
+**wrap your stuff in begin ...  end blocks if not already in functions, write proper stuffs, don't always use global**
+**do you really need something to be mutable?**
+**vectorization will sometimes bite. In contrast to R/ matlab, loops are not that bad sometimes in JL**
+
+
+
 
 
 
